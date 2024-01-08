@@ -1,0 +1,166 @@
+:root {
+    --fontFamilly: 'Red Hat Display', sans-serif;
+
+    /* Primary */
+
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    
+    /* Neutral */
+    
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-y: -65px;
+    background-color: var(--paleBlue);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    max-width: 290px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+main .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .card .hero {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+main .card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fontFamilly);
+    text-align: center;
+    margin: 0 40px;
+}
+
+main .card .info h1 {
+    margin: 25px 0 10px 0;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: var(--darkBlue);
+}
+
+main .card .info p {
+    color: var(--desaturatedBlue);
+    font-size: 0.8em;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+main .card .infoPlan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--veryPaleBlue);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+main .card .infoPlan img {
+    width: 40px;
+    margin-right: 15px;
+}
+
+main .card .infoPlan .plan {
+    margin-right: 40px;
+}
+
+main .card .infoPlan .plan h2 {
+    color: var(--darkBlue);
+    font-family: var(--fontFamilly);
+    font-size: 0.78em;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+
+main .card .infoPlan .plan p {
+    color: var(--desaturatedBlue);
+    font-family: var(--fontFamilly);
+    font-size: 0.8em;
+}
+
+main .card .infoPlan a {
+    font-size: 0.8em;
+    font-family: var(--fontFamilly);
+    font-weight: 700;
+}
+
+main .card .payment {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--fontFamilly);
+    font-size: 0.77em;
+    font-weight: 700;
+    width: 240px;
+    background-color: var(--brightBlue);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 20px hsl(224, 23%, 85%);
+    margin-bottom: 20px;
+}
+
+main .card .cancelOrder {
+    color: var(--desaturatedBlue);
+    text-decoration: none;
+    font-size: 0.74em;
+    font-family: var(--fontFamilly);
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.attribution {
+    color: var(--desaturatedBlue);
+    font-family: var(--fontFamilly);
+    margin-bottom: 30px;
+    font-size: 0.8em;
+}
+
+.attribution a {
+    text-decoration: none;
+}
+
+@media (width: 1440px) {
+    body {
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    main   {
+        max-width: 360px;
+    }
+
+    main .card .infoPlan, .payment {
+        width: 79%;
+    }
+}
