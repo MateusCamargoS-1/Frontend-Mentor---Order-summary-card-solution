@@ -23,7 +23,7 @@
 body {
     background-image: url(images/pattern-background-mobile.svg);
     background-repeat: no-repeat;
-    background-position-y: -65px;
+    background-size: 100% 53%;
     background-color: var(--paleBlue);
 
     min-height: 100vh;
